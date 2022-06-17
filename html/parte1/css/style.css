@@ -1,0 +1,22 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	
+	background: rgb(220,233,53);
+background: linear-gradient(0deg, rgba(220,233,53,0) 0%, rgba(201,217,46,0) 100%),url("../img/fondo.webp");
+    
+    background-size: cover;
+    background-position: center;
+}
+
+hr{
+	width: 100%;
+	color:rgba(255,193,7,1.00);
+	border-top: 7px solid;
+	padding: 0;
+	margin-top: 0.5rem;
+}
+
+.fondo{
+	
+}

@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>HTML DOM BASICO</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/stylesParte1.css" rel="stylesheet" />
+    </head>
+    <body class="d-flex flex-column h-100">
+        <main class="flex-shrink-0">
+            <!-- Navigation-->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+                <div class="container px-5">
+                    <a class="navbar-brand" href="#introduccion">HTML DOM</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item"><a class="nav-link" href="#introduccion">Introduccion</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#metodos">Metodos</a></li>
+							<li class="nav-item"><a class="nav-link" href="#componentes">Documentos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#elementos">Elementos</a></li>
+							<li class="nav-item"><a class="nav-link" href="#html">HTML</a></li>
+							<li class="nav-item"><a class="nav-link" href="#css">CSS</a></li>
+							<li class="nav-item"><a class="nav-link" href="#formularios">Formularios</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+			
+            <!-- INTRODUCCION------------------------------>
+			
+            <header class="bg-dark py-5" id="introduccion">
+                <div class="container px-5">
+                    <div class="row gx-5 align-items-center justify-content-center">
+                        <div class="col-lg-8 col-xl-7 col-xxl-6">
+                            <div class="my-5 text-center text-xl-start">
+								<h1 class="display-5 fw-bolder mb-1 text-white">Introducción</h1>
+								<br>
+                                <h1 class="display-5 fw-bolder text-white mb-2">HTML DOM (Document Object Model)</h1>
+                                <p class="lead fw-normal text-white-50 mb-4">Es esencialmente una interfaz de plataforma que proporciona un conjunto estándar de objetos para representar documentos HTML, XHTML y XML, un modelo estándar sobre cómo pueden combinarse dichos objetos, y una interfaz estándar para acceder a ellos y manipularlos.</p>
+								<p class="lead fw-normal text-white-50 mb-4">El modelo HTML DOM se construye como un árbol de objetos :</p>
+                                <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#introduccion2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="img/html.jpg" alt="..." /></div>
+                    </div>
+                </div>
+            </header>
+			
+			
+            <!-- Seccion Introduccion 2 -->
+            <section class="py-5" id="introduccion2">
+				<div class="container px-5 my-5">
+                    <div class="row gx-5">
+                     
+                        <div class="col-lg-9">
+                            <!-- Post content-->
+                            <article>
+                                <!-- Post header-->
+                                <header class="mb-4">
+                                    <!-- Post title-->
+                                    <h1 class="fw-bolder mb-1">El árbol de objetos HTML DOM</h1>
+                                    <!-- Post meta content-->
+                                  
+                                </header>
+                                <!-- Preview image figure-->
+                                <figure class="mb-4"><img class="img-fluid rounded" src="img/arbol.gif" alt="..." /></figure>
+                            </article>
+                            <!-- Comments section-->
+                        </div>
+                    </div>
+                </div>
+				
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                        <div class="col-lg-4 mb-5 mb-lg-0"><h2 class="fw-bolder mb-0">Con el modelo de objetos, JavaScript obtiene todo el poder que necesita para crear HTML dinámico:</h2></div>
+                        <div class="col-lg-8">
+                            <div class="row gx-5 row-cols-1 row-cols-md-2">
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                                    <h2 class="h5">1.</h2>
+                                    <p class="mb-0">JavaScript puede cambiar todos los elementos HTML en la página.</p>
+                                </div>
+                                <div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">2.</h2>
+                                    <p class="mb-0">JavaScript puede cambiar todos los atributos HTML en la página</p>
+                                </div>
+								
+								<div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">3.</h2>
+                                    <p class="mb-0">JavaScript puede cambiar todos los estilos CSS en la página</p>
+                                </div>
+								
+								<div class="col mb-5 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                                    <h2 class="h5">4.</h2>
+                                    <p class="mb-0">JavaScript puede eliminar elementos y atributos HTML existentes</p>
+                                </div>
+                                <div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">5.</h2>
+                                    <p class="mb-0">JavaScript puede agregar nuevos elementos y atributos HTML</p>
+                                </div>
+								
+								<div class="col mb-5 mb-md-0 h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">6.</h2>
+                                    <p class="mb-0">JavaScript puede reaccionar a todos los eventos HTML existentes en la página</p>
+                                </div>
+								
+                                <div class="col h-100">
+                                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                                    <h2 class="h5">7.</h2>
+                                    <p class="mb-0">JavaScript puede crear nuevos eventos HTML en la página</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="img/imagen1.gif" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">¿Qué es el DOM?</h2>
+                            <p class="lead fw-normal text-muted mb-0">El DOM es un estándar W3C (World Wide Web Consortium).</p><p class="lead fw-normal text-muted mb-0">El DOM define un estándar para acceder a los documentos:</p>
+							<p class="lead fw-normal text-muted mb-0">"El Modelo de Objetos de Documento (DOM) del W3C es una plataforma y una interfaz de lenguaje neutral que permite que los programas y scripts accedan y actualicen dinámicamente el contenido, la estructura y el estilo de un documento".</p>
+                        </div>
+                    </div>
+                </div>
+				
+				<div class="container px-5 my-5">
+                    <div class="row gx-5 align-items-center">
+                        <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="img/imagen2.webp" alt="..." /></div>
+                        <div class="col-lg-6">
+                            <h2 class="fw-bolder">¿Qué es el HTML DOM?</h2>
+                            <p class="lead fw-normal text-muted mb-0">El HTML DOM es un modelo de objeto estándar y una interfaz de programación para HTML. Se define:</p>
+							<ul>
+								<li class="lead fw-normal text-muted mb-0">Los elementos HTML como objetos.</li>
+								<li class="lead fw-normal text-muted mb-0">Las propiedades de todos los elementos HTML.</li>
+								<li class="lead fw-normal text-muted mb-0">Los métodos para acceder a todos los elementos HTML.</li>
+								<li class="lead fw-normal text-muted mb-0">Los eventos para todos los elementos HTML.</li>
+							</ul>
+							<p class="lead fw-normal text-muted mb-0">En otras palabras: el HTML DOM es un estándar sobre cómo obtener, cambiar, agregar o eliminar elementos HTML.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+			
+			
+			<!-- METODOS------------------------------>
+            <div class="py-5 bg-dark" id="metodos">
+                <div class="container px-5 my-5">
+					<h1 class="display-5 fw-bolder mb-1 text-white">Métodos</h1>
+					<br>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic text-white">Los <strong>métodos</strong> HTML DOM son acciones que puede realizar (en elementos HTML). Las propiedades HTML DOM son valores (de elementos HTML) que puede establecer o cambiar.
+								</div>
+								 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#metodos2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+			
+            <!-- Seccion Metodos 2----------------------------->
+			
+            <section class="py-5" id="metodos2">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+						
+						<div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="img/interfzaDOM.jpg" alt="..." />
+                                <div class="card-body p-4">
+                                   
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">La interfaz de programación DOM</h5></a>
+                                    <p class="card-text mb-0">Se puede acceder al HTML DOM con JavaScript (y con otros lenguajes de programación).</p>
+									<br>
+									<p class="card-text mb-0">En el DOM, todos los elementos HTML se definen como objetos .</p>
+									<br>
+									<p class="card-text mb-0">La interfaz de programación son las propiedades y métodos de cada objeto.</p>
+									<br>
+									<p class="card-text mb-0">Una propiedad es un valor que puede obtener o establecer (como cambiar el contenido de un elemento HTML).</p>
+									<br>
+									<p class="card-text mb-0">Un método es una acción que puede realizar (como agregar o eliminar un elemento HTML).</p>
+                                </div>
+                            </div>
+                        </div>
+						
+						<div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <img class="card-img-top" src="img/getbyid.jpg" alt="..." />
+                                <div class="card-body p-4">
+                                   
+                                    <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">El método getElementById</h5></a>
+                                    <p class="card-text mb-0">La forma más común de acceder a un elemento HTML es usar el <strong>id</strong> del elemento.</p>
+									<br>
+									<p class="card-text mb-0">En el ejemplo anterior, el <strong>getElementById</strong> método utilizado <strong>id="demo"</strong> para encontrar el elemento.</p>
+                                </div>
+                            </div>
+                        </div>
+						
+                        <div class="col-lg-4 mb-5">
+                            <div class="card h-100 shadow border-0">
+                                <p><img class="card-img-top" src="img/inner.png" alt="..." /></p>
+                          
+                                <div class="card-body p-4">
+                                
+                                  <a class="text-decoration-none link-dark stretched-link" href="#!"><h5 class="card-title mb-3">La propiedad HTML interior</h5></a>
+                                    <p class="card-text mb-0">La forma más sencilla de obtener el contenido de un elemento es mediante la innerHTMLpropiedad.</p>
+									<br>
+									<p class="card-text mb-0">La <strong>innerHTML</strong> propiedad es útil para obtener o reemplazar el contenido de los elementos HTML.</p>
+									<br>
+									<p class="card-text mb-0">La <strong>innerHTML</strong> propiedad se puede usar para obtener o cambiar cualquier elemento HTML, incluidos <strong>html y body</strong>.</p>
+                              </div>
+                          </div>
+                        </div>
+                        
+					</div>
+                </div>
+            </section>
+        </main>
+		
+		<!-- COMPONENTES------------------------------>
+		<div class="py-5 bg-dark" id="componentes">
+                <div class="container px-5 my-5">
+					<h1 class="display-5 fw-bolder mb-1 text-white">Componentes JavaScript HTML DOM</h1>
+					<br>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic text-white">El objeto del documento representa su página web.
+									<p class="card-text mb-0">Si desea acceder a cualquier elemento en una página HTML, siempre comienza accediendo al objeto del documento.</p>
+									<br class="card-text mb-0">
+									<p class="card-text mb-0">A continuación se muestran algunos ejemplos de cómo puede utilizar el objeto de documento para acceder y manipular HTML.</p>
+									<br>
+								</div>
+								 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#componentes2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+     
+		
+            <!-- Seccion componentes2 -->
+            <section class="py-5" id="componentes2">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                       
+                        <div class="col-lg-9">
+                            <article>
+                                <header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Encontrar elementos HTML</h1>
+                                </header>
+								<section class="mb-5">
+								
+							    <img src="img/componentes/metodosid.png" width="894" height="185" alt=""/>
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Cambio de elementos HTML</h1>
+                                </header>
+								<section class="mb-5">
+								
+							    <img src="img/componentes/elementoscambio.png" width="894" height="185" alt=""/>
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Adición y eliminación de elementos</h1>
+                                </header>
+								<section class="mb-5">
+								
+							    <img src="img/componentes/adicion.png" width="894" height="185" alt=""/>
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Adición de controladores de eventos</h1>
+                                </header>
+								<section class="mb-5">
+								
+							    <img src="img/componentes/adicion2.png" width="894" height="185" alt=""/>
+								</section>
+							</article>
+						</div>
+					</div>
+                </div>
+            </section>
+		
+		
+		<!-- ELEMENTOS------------------------------>
+		<div class="py-5 bg-dark" id="elementos">
+                <div class="container px-5 my-5">
+					<h1 class="display-5 fw-bolder mb-1 text-white">Elementos HTML DOM de JavaScript</h1>
+					<br>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic text-white">Esta página le enseña cómo encontrar y acceder a elementos HTML en una página HTML.
+								</div>
+								 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#elementos2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		
+		<!-- Seccion de elementos------------------------------>
+	<section class="py-5" id="elementos2">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                       
+                        <div class="col-lg-9">
+                            <article>
+                                <header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Encontrar elementos HTML</h1>
+                                </header>
+								<section class="mb-5">
+									<p class="fs-5 mb-4">A menudo, con JavaScript, desea manipular elementos HTML.</p>
+									<p class="fs-5 mb-4">Para hacerlo, primero tienes que encontrar los elementos. Hay varias maneras de hacer esto:</p>
+									<ul class="fs-5 mb-4">
+										<li>Encontrar elementos HTML por ID.</li>
+										<li>Encontrar elementos HTML por nombre de etiqueta.</li>
+										<li>Encontrar elementos HTML por nombre de clase.</li>
+										<li>Encontrar elementos HTML mediante selectores CSS.</li>
+										<li>Encontrar elementos HTML por colecciones de objetos HTML.</li>
+									</ul>
+								</section>
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Encontrar elemento HTML por ID</h1>
+                                </header>
+								<section class="mb-5">
+									<p class="fs-5 mb-4">La forma más fácil de encontrar un elemento HTML en el DOM es utilizando la identificación del elemento.</p>
+								</section>
+								
+							</article>
+                            <!-- Comments section-->
+                            <section>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-4">
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Codigo</div>
+                                                <p>
+													<pre>
+													<code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;JavaScript HTML DOM&lt;/h2&gt;
+
+&lt;p id="intro"&gt;Finding HTML Elements by Id&lt;/p&gt;
+&lt;p&gt;This example demonstrates the &lt;b&gt;getElementsById&lt;/b&gt; method.&lt;/p&gt;
+
+&lt;p id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML = 
+"The text from the intro paragraph is: " + element.innerHTML;
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+
+													</code>
+													</pre>
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </section>
+							<br>
+							<section>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <!-- Comment with nested comments-->
+                                        <div class="d-flex mb-4">
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Ejecución</div>
+                                                <p>
+													<h2>JavaScript HTML DOM</h2>
+
+<p id="intro">Finding HTML Elements by Id</p>
+<p>This example demonstrates the <b>getElementsById</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML = 
+"The text from the intro paragraph is: " + element.innerHTML;
+
+</script>
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </section>
+							<br>
+							<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Búsqueda de elementos HTML por nombre de etiqueta</h1>
+                                </header>
+								<section class="mb-5">
+									<p class="fs-5 mb-4">Este ejemplo encuentra todos los p elementos:</p>
+								</section>
+							<br>
+							<section>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-4">
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Codigo</div>
+                                                <p>
+													<pre>
+													<code>
+													
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;JavaScript HTML DOM&lt;/h2&gt;
+
+&lt;p&gt;Finding HTML Elements by Tag Name.&lt;/p&gt;
+&lt;p&gt;This example demonstrates the &lt;b&gt;getElementsByTagName&lt;/b&gt; method.&lt;/p&gt;
+
+&lt;p&gt; id="demo"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+const element = document.getElementsByTagName("p");
+
+document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+													</code></pre>
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </section>
+							<br>
+							
+							<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Encontrar elementos HTML por nombre de clase</h1>
+                                </header>
+								<section class="mb-5">
+									<p class="fs-5 mb-4">Si desea encontrar todos los elementos HTML con el mismo nombre de clase, use getElementsByClassName().</p>
+								</section>
+							<br>
+							<section>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-4">
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Codigo</div>
+                                                <p>
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </section>
+							<br>
+							<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Búsqueda de elementos HTML mediante selectores de CSS</h1>
+                                </header>
+								<section class="mb-5">
+									<p class="fs-5 mb-4">Si desea encontrar todos los elementos HTML que coincidan con un selector CSS específico (id, nombres de clase, tipos, atributos, valores de atributos, etc.), use el querySelectorAll()método.</p>
+								</section>
+							<br>
+							<section>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-4">
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Codigo</div>
+                                                <p>
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </section>
+							<br>
+							<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Búsqueda de elementos HTML por colecciones de objetos HTML</h1>
+                                </header>
+								<section class="mb-5">
+									<p class="fs-5 mb-4">Este ejemplo encuentra el elemento de formulario con id="frm1", en la colección de formularios, y muestra todos los valores de los elementos:</p>
+								</section>
+							<br>
+							<section>
+                                <div class="card bg-light">
+                                    <div class="card-body">
+                                        <div class="d-flex mb-4">
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Codigo</div>
+                                                <p>
+													<pre>
+													<code>
+
+&gt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+
+&lt;h2&gt;JavaScript HTML DOM&lt;/h2&gt;
+
+&lt;p id="intro"&gt;Finding HTML Elements by Id&lt;/p&gt;
+&lt;p&gt;This example demonstrates the &lt;b&gt;getElementsById&lt;/b&gt;
+method.&lt;/p&gt;
+
+&lt;p id="demo"&lt;/p&gt;
+
+&lt;script&gt;
+const element = document.getElementById("intro");
+
+document.getElementById("demo").innerHTML = 
+"The text from the intro paragraph is: " + element.innerHTML;
+&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code>
+</pre>
+												</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                          </section>
+							
+                      </div>
+                    </div>
+                </div>
+            </section>
+		
+		<!-- HTML------------------------------>
+		<div class="py-5 bg-dark" id="html">
+                <div class="container px-5 my-5">
+					<h1 class="display-5 fw-bolder mb-1 text-white">JavaScript HTML DOM</h1>
+					<br>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic text-white">El HTML DOM permite que JavaScript cambie el contenido de los elementos HTML.
+								</div>
+								 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#html2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		
+ <!-- Seccion html2 -->
+            <section class="py-5" id="html2">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                       
+                        <div class="col-lg-9">
+                            <article>
+                                <header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Cambio de contenido HTML</h1>
+									
+                                </header>
+								<section class="mb-5">
+								<p>La forma más sencilla de modificar el contenido de un elemento HTML es mediante la <strong>innerHTML</strong> propiedad.</p>
+							   
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Cambiar el valor de un atributo</h1>
+                                </header>
+								<section class="mb-5">
+								<p>
+									Para cambiar el valor de un atributo HTML, use esta sintaxis:
+									</p>
+									<pre>
+									<code>
+document.getElementById(id).attribute = new value
+									</code>
+									</pre>
+							    
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Contenido HTML dinámico</h1>
+                                </header>
+								<section class="mb-5">
+								<p>JavaScript puede crear contenido HTML dinámico:</p>
+									<p>Fecha: jue 09 jun 2022 18:47:02 GMT-0500 (hora de Ecuador)</p>
+							  
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">documento.escribir()</h1>
+                                </header>
+								<section class="mb-5">
+								<p>En JavaScript, document.write()se puede usar para escribir directamente en el flujo de salida HTML.</p>
+							    
+								</section>
+							</article>
+						</div>
+					</div>
+                </div>
+            </section>
+		
+
+<!-- CSS------------------------------>
+		<div class="py-5 bg-dark" id="css">
+                <div class="container px-5 my-5">
+					<h1 class="display-5 fw-bolder mb-1 text-white">JavaScript HTML DOM - Cambio de CSS</h1>
+					<br>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+                                <div class="fs-4 mb-4 fst-italic text-white">El HTML DOM permite que JavaScript cambie el estilo de los elementos HTML.
+								</div>
+								 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#css2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+<!-- Seccion css------------------------------>
+<section class="py-5" id="css2">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                       
+                        <div class="col-lg-9">
+                            <article>
+                        
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Cambio de estilo HTML</h1>
+                                </header>
+								<section class="mb-5">
+								<p>
+									Para cambiar el estilo de un elemento HTML, use esta sintaxis:
+									</p>
+									<pre>
+<code>
+document.getElementById(id).style.property = new style
+</code>
+									</pre>
+							    
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Uso de eventos</h1>
+                                </header>
+								<section class="mb-5">
+								<p>El HTML DOM le permite ejecutar código cuando ocurre un evento.</p>
+									<p>Los eventos son generados por el navegador cuando "le suceden cosas" a los elementos HTML:</p>
+									<ul>
+										<li>Se hace clic en un elemento.</li>
+										<li>La página ha cargado.</li>
+										<li>Los campos de entrada se cambian.</li>
+									</ul>
+							 
+								</section>
+								
+						
+							</article>
+						</div>
+					</div>
+                </div>
+            </section>
+
+
+<!-- FORMULARIOS ------------------------------>
+		<div class="py-5 bg-dark" id="formularios">
+                <div class="container px-5 my-5">
+					<h1 class="display-5 fw-bolder mb-1 text-white">Formularios JavaScript</h1>
+					<br>
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-10 col-xl-7">
+                            <div class="text-center">
+								 <div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
+                                    <a class="btn btn-outline-warning btn-lg px-4" href="#formularios2">Leer Mas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+<!-- Seccion formularios------------------------------>
+<section class="py-5" id="formularios2">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5">
+                       
+                        <div class="col-lg-9">
+                            <article>
+                        
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">Validación de formulario JavaScript</h1>
+                                </header>
+								<section class="mb-5">
+								<p>
+									Si un campo de formulario (fname) está vacío, esta función alerta con un mensaje y devuelve falso para evitar que se envíe el formulario:
+									</p>
+									<pre>
+									<code>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+									</code>
+									</pre>
+							    
+								</section>
+								
+								<header class="mb-4">
+                                    <h1 class="fw-bolder mb-1">JavaScript puede validar la entrada numérica</h1>
+                                </header>
+								<section class="mb-5">
+								<p>JavaScript se usa a menudo para validar la entrada numérica:</p>
+							 <pre>
+							 <code>
+function myFunction() {
+  // Get the value of the input field with id="numb"
+  let x = document.getElementById("numb").value;
+  // If x is Not a Number or less than one or greater than 10
+  let text;
+  if (isNaN(x) || x &lt; 1 || x &gt; 10) {
+    text = "Input not valid";
+  }
+  else
+  {
+    text = "Input OK";
+  }
+  document.getElementById("demo").innerHTML = text;
+}
+							 </code></pre>
+								</section>
+								
+						
+							</article>
+						</div>
+					</div>
+                </div>
+            </section>
+
+
+
+        <!-- Footer-->
+        <footer class="bg-dark py-4 mt-auto">
+            <div class="container px-5">
+                <div class="row align-items-center justify-content-between flex-column flex-sm-row">
+                    <div class="col-auto">
+						<div class="small m-0 text-white">Copyright &copy; HTML DOM 2022
+						
+						</div>
+						
+					</div>
+                   
+                </div>
+            </div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
